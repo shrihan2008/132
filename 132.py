@@ -1,4 +1,4 @@
-import plotly.express as px
+
 import plotly.express as px
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
@@ -6,15 +6,13 @@ rows = []
 import seaborn as sns
 name=[]
 import csv
-with open("dwarf_stars.csv",'r') as f:
-  f1=csv.reader(f)
-  for a  in f1:
-    name.append(a)
+import pandas as pd
+f=pd.read_csv('star_with_gravity.csv')
 star_data=name[1:]
 star_data_rows = rows[1:]
 gravity=[]
-mass=[]
-radius=[]
+mass=f['Mass'].to_list()
+radius =f['Radius'].to_list()
 star_name=[]
 for i in star_data:
   mass.append(star_data[3])
@@ -31,3 +29,5 @@ for index,name in enumerate(star_name):
 
 
 
+fig=px.scatter(x=mass,y=radius)
+fig.show()
