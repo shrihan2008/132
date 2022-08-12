@@ -1,4 +1,3 @@
-
 import plotly.express as px
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
@@ -21,13 +20,10 @@ for i in star_data:
 
 star_gravity=[]
 
-for index,name in enumerate(star_name):
-  g=(float(mass[index])) *6.17/100000000000/(float(radius[index]) * float(radius[index]) ) 
-  #g=(float(mass[index])*6.17/1000) /(float(radius[index]) * float(radius[index]) ) 
-  star_gravity.append(g) 
 
 
 
 
-fig=px.scatter(x=mass,y=radius)
-fig.show()
+
+plt.plot(mass,radius)
+plt.show()
