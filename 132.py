@@ -21,9 +21,8 @@ for i in star_data:
 star_gravity=[]
 
 
-
-
-
-
 plt.plot(mass,radius)
+plt.ylabel("mass")
+plt.xlabel("radius")
+plt.title("Mass on Radius")
 plt.show()
