@@ -27,5 +27,9 @@ plt.xlabel("radius")
 plt.title("Mass on Radius")
 plt.show()
 
-fig = px.scatter(x=radius, y=mass)
-fig.show()
+plt.plot(mass,gravity)
+plt.ylabel("mass")
+plt.xlabel("gravity")
+plt.title("Mass on Gravity")
+plt.show()
+
