@@ -13,6 +13,7 @@ gravity=[]
 mass=f['Mass'].to_list()
 radius =f['Radius'].to_list()
 star_name=[]
+
 for i in star_data:
   mass.append(star_data[3])
   radius.append(star_data[4])
@@ -20,9 +21,11 @@ for i in star_data:
 
 star_gravity=[]
 
-
 plt.plot(mass,radius)
 plt.ylabel("mass")
 plt.xlabel("radius")
 plt.title("Mass on Radius")
 plt.show()
+
+fig = px.scatter(x=radius, y=mass)
+fig.show()
